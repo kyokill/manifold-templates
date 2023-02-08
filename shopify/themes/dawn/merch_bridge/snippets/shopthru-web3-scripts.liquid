@@ -1,0 +1,18 @@
+<script>
+      window.shopthru_add_to_cart = "{{ 'products.product.add_to_cart'| t }}";
+      window.shopthru_sold_out = "{{ 'products.product.sold_out' | t }}";
+      const add_to_cart_t = !window.shopthru_add_to_cart
+        ? undefined
+        : window.shopthru_add_to_cart
+            ?.toLowerCase()
+            .includes("translation missing")
+        ? ""
+        : window.shopthru_add_to_cart?.toLowerCase();
+      const sold_out_t = !window.shopthru_sold_out
+        ? undefined
+        : window.shopthru_sold_out
+            ?.toLowerCase()
+            .includes("translation missing")
+        ? ""
+        : window.shopthru_sold_out?.toLowerCase();
+    </script>
